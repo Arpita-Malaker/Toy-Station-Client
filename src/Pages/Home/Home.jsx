@@ -1,6 +1,7 @@
 
 import ExtraSection from '../ExtraSection/ExtraSection';
 import Gellary from '../Gellary/Gellary';
+import SecondExtra from '../SecondExtra/SecondExtra';
 import Shopbycategory from '../Shopbycategory/Shopbycategory';
 import './Home.css'
 
@@ -22,6 +23,7 @@ We’re committed to giving you the plain best with attention to the most astoun
 <div><Gellary></Gellary></div>
 <div><ExtraSection></ExtraSection></div>
 <div><Shopbycategory></Shopbycategory></div>
+<div><SecondExtra></SecondExtra></div>
         </div>
     );
 };

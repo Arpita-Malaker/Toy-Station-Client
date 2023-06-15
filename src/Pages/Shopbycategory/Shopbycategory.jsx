@@ -34,7 +34,7 @@ const Shopbycategory = () => {
 
 
   return (
-    <div className="mt-16">
+    <div className="mt-16 mb-16">
 
       <div className="mt-16 mb-16">
         <h2 className='text-3xl text-green-800 font-bold text-center'>Choose Catagory What you Want!!!</h2>
