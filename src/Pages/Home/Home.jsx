@@ -1,5 +1,6 @@
 
 import Gellary from '../Gellary/Gellary';
+import Shopbycategory from '../Shopbycategory/Shopbycategory';
 import './Home.css'
 
 const Home = () => {
@@ -18,6 +19,7 @@ We’re committed to giving you the plain best with attention to the most astoun
   </div>
 </div>
 <div><Gellary></Gellary></div>
+<Shopbycategory></Shopbycategory>
         </div>
     );
 };

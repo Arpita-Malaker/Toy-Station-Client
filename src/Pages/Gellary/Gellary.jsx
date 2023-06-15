@@ -11,7 +11,6 @@ import p9 from '../../assets/gellary/9.jpg'
 import p10 from '../../assets/gellary/10.jpg'
 import p11 from '../../assets/gellary/11.jpg'
 import p12 from '../../assets/gellary/12.jpg'
-import p13 from '../../assets/gellary/13.jpg'
 import './Gellary.css'
 
 const Gellary = () => {
