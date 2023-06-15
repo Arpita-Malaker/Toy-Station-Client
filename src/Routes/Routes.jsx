@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Contact/Login/Login";
 import Registration from "../Pages/Contact/Registration/Registration";
 import ErrorPage from "../Pages/ErroePage/ErrorPage";
+import Bolgs from "../Pages/Blogs/Bolgs";
 
   export const router = createBrowserRouter([
     {
@@ -26,7 +27,11 @@ import ErrorPage from "../Pages/ErroePage/ErrorPage";
       {
         path:'/registration',
         element:<Registration></Registration>
-    }
+    },
+    {
+      path:'/blogs',
+      element:<Bolgs></Bolgs>
+  }
     
       ]
     },
