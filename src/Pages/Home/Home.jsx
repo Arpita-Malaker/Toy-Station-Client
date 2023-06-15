@@ -1,4 +1,5 @@
 
+import ExtraSection from '../ExtraSection/ExtraSection';
 import Gellary from '../Gellary/Gellary';
 import Shopbycategory from '../Shopbycategory/Shopbycategory';
 import './Home.css'
@@ -6,7 +7,7 @@ import './Home.css'
 const Home = () => {
     return (
         <div>
-          <div className="hero min-h-screen bg-home">
+          <div className="hero pt-20 pb-20 bg-home">
 
   <div className="hero-content text-center ">
     <div className="max-w ">
@@ -19,7 +20,8 @@ We’re committed to giving you the plain best with attention to the most astoun
   </div>
 </div>
 <div><Gellary></Gellary></div>
-<Shopbycategory></Shopbycategory>
+<div><ExtraSection></ExtraSection></div>
+<div><Shopbycategory></Shopbycategory></div>
         </div>
     );
 };

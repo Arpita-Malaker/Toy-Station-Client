@@ -6,7 +6,7 @@
         "sellerEmail": "toykingdom@example.com",
         "subCategory": "Stuffed Animals",
         "price": 19.99,
-        "rating": "4.5",
+        "rating": 4.5,
         "availableQuantity": 10,
         "detailDescription": "This adorable cuddly elephant is made with soft plush materials, perfect for hugging and snuggling."
       },
@@ -18,7 +18,7 @@
         "sellerEmail": "puzzleplanet@example.com",
         "subCategory": "Puzzles",
         "price": 14.99,
-        "rating": "4.2",
+        "rating": 4.2,
         "availableQuantity": 5,
         "detailDescription": "This wooden giraffe puzzle features colorful pieces that can be assembled to create a fun and educational toy."
       },
@@ -28,9 +28,9 @@
         "toyName": "Interactive Dog Toy",
         "sellerName": "Pet Paradise",
         "sellerEmail": "petparadise@example.com",
-        "subCategory": "Interactive Toys",
+        "subCategory": "Interactive dog Toys",
         "price": 12.99,
-        "rating": "4.8",
+        "rating": 4.8,
         "availableQuantity": 20,
         "detailDescription": "This interactive dog toy keeps your furry friend entertained with its squeaky sounds and engaging design."
       },
@@ -42,7 +42,7 @@
         "sellerEmail": "purrfectpets@example.com",
         "subCategory": "Stuffed Animals",
         "price": 6.99,
-        "rating": "4.6",
+        "rating": 4.6,
         "availableQuantity": 15,
         "detailDescription": "This colorful fish cat toy is filled with catnip and has a crinkly texture, making it irresistible for your feline friend."
       },
@@ -54,7 +54,7 @@
         "sellerEmail": "babybliss@example.com",
         "subCategory": "Interactive Toys",
         "price": 9.99,
-        "rating": "4.4",
+        "rating": 4.4,
         "availableQuantity": 8,
         "detailDescription": "This plush bunny rattle is a perfect first toy for babies, with its soft fabric and gentle rattle sound."
       },
@@ -66,7 +66,7 @@
         "sellerEmail": "funandgames@example.com",
         "subCategory": "Stuffed Animals",
         "price": 17.99,
-        "rating": "4.7",
+        "rating": 4.7,
         "availableQuantity": 12,
         "detailDescription": "This talking parrot plush repeats what you say in a cute parrot voice, providing hours of interactive fun."
       },
@@ -78,7 +78,7 @@
         "sellerEmail": "playtimeemporium@example.com",
         "subCategory": "Interactive Toys",
         "price": 21.99,
-        "rating": "4.3",
+        "rating": 4.3,
         "availableQuantity": 18,
         "detailDescription": "This pull-along duck toy waddles and quacks, making it a delightful companion for toddlers during playtime."
       },
@@ -90,7 +90,7 @@
         "sellerEmail": "pawsomepets@example.com",
         "subCategory": "Puzzles",
         "price": 8.99,
-        "rating": "4.9",
+        "rating": 4.9,
         "availableQuantity": 25,
         "detailDescription": "This squeaky hedgehog toy is perfect for dogs who love to chew and play, providing both entertainment and dental benefits."
       },
@@ -102,7 +102,7 @@
         "sellerEmail": "adventurezone@example.com",
         "subCategory": "Puzzles",
         "price": 29.99,
-        "rating": "4.1",
+        "rating": 4.1,
         "availableQuantity": 6,
         "detailDescription": "This jungle animal figure set includes various realistic animal figures, allowing kids to create their own safari adventures."
       },
@@ -114,7 +114,7 @@
         "sellerEmail": "nighttimewonders@example.com",
         "subCategory": "Interactive Toys",
         "price": 11.99,
-        "rating": "4.0",
+        "rating": 4.0,
         "availableQuantity": 3,
         "detailDescription": "This glow-in-the-dark snake toy is perfect for nighttime play in the backyard, providing a fun and visually captivating experience."
       }
