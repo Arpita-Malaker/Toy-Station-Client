@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 const Registration = () => {
@@ -40,7 +41,7 @@ const Registration = () => {
                                 <button className="btn bg-black text-white">Registration</button>
                             </div>
                             <div className="mt-5 text-sm"><p>Are You Already login?<span className="mx-3"><Link to='/login' className="text-blue-500 ">Login Here</Link></span></p></div>
-                            {/* <SocialLogin></SocialLogin> */}
+                          <SocialLogin></SocialLogin>
                         </form>
                     </div>
 
