@@ -6,30 +6,22 @@ import ReactStarsRating from 'react-awesome-stars-rating';
 const Shopbycategory = () => {
 
   const [cata, setcata] = useState([]);
-  // const [animals, setAnimals] = useState([]);
+
 
   useEffect(() => {
-    fetch('toys.json')
+    fetch('http://localhost:5000/toys')
       .then(res => res.json())
       .then(data => {
         setcata(data)
-          , console.log(data)
+        
       })
 
 
   }, [])
 
-  console.log(cata)
-
-  // useEffect(()=>{
-
-  //     const animalData = cata.find(c=>c.subCategory==="Stuffed Animals");
-  //     setAnimals(animalData);
 
 
-  // },[])
 
-  // console.log(animals)
 
 
 
@@ -52,7 +44,7 @@ const Shopbycategory = () => {
 
 
 
-        <TabPanel className="grid grid-rows-1 grid-flow-col gap-4 lg:grid-rows-1 md:grid-rows-1 sm:grid-rows-3 ms-10">
+        <TabPanel className="grid grid-rows-6 grid-flow-col gap-4 lg:grid-rows-1 md:grid-rows-1 sm:grid-rows-3 ms-10">
           {
             cata.slice(0, 9).map((item) => (item.subCategory === "Stuffed Animals") ? <div key={item._id} >
 

@@ -5,7 +5,7 @@ const ExtraSection = () => {
         <div className='mt-16'>
             <div className="hero p-10 bg-blue-50">
                 <div className="hero-content text-center">
-                    <div className=" flex gap-10">
+                    <div className="flex gap-10 ">
                       <div className='w-full'>
                         <img className='w-full' src={img1}/>
                       </div>
