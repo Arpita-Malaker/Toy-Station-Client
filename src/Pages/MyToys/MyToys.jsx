@@ -54,6 +54,7 @@ const MyToys = () => {
                                 'Your file has been deleted.',
                                 'success'
                             )
+                            window.location.reload(true)
                         }
                     })
             }
