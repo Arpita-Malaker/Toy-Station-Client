@@ -9,9 +9,9 @@ import { Helmet } from "react-helmet";
 
 const ToyDetails = () => {
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
     const datas = useLoaderData();
-    console.log(datas);
+    // console.log(datas);
 
     const [cata, setcata] = useState([]);
 
@@ -28,7 +28,7 @@ const ToyDetails = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    console.log('match data', cata);
+    // console.log('match data', cata);
 
     // const {data: toys =[]}=useQueryClient({
 
@@ -51,7 +51,7 @@ const ToyDetails = () => {
       
     </Helmet>
         <div className="card card-side bg-base-100 flex gap-10 mt-16 mb-16 shadow-xl ml-16">
-            <figure><img src={cata.toyUrl} /></figure>
+            <figure className="ml-16"><img src={cata.toyUrl} /></figure>
             <div className="card-body">
                 <h2 className="card-title text-blue-600 text-2xl ">{cata.toyName}</h2>
                 <p><span className="text-blue-600 font-bold">Toy Catagory</span>: {cata.subCategory}</p>
@@ -61,7 +61,7 @@ const ToyDetails = () => {
                 <p><span className="text-blue-600 font-bold">Available quantity</span>: {cata.availableQuantity}</p>
                 <p><span className="text-blue-600 font-bold">Rating</span>: <ReactStarsRating className="flex" value={cata.rating} /></p>
 
-                <p>Toy Details:{cata.detailDescription}</p>
+                <p><span className="text-blue-600 font-bold">Toy Details</span>:{cata.detailDescription}</p>
 
                
             </div>

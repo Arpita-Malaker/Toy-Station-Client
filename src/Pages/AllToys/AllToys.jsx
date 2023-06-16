@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
@@ -6,7 +7,8 @@ import { Link } from "react-router-dom";
 const AllToys = () => {
     const [cata, setcata] = useState([]);
 
-
+const [search,setSearch]= useState('');
+// console.log(search);
 
     useEffect(() => {
         fetch('http://localhost:5000/toys')
@@ -19,7 +21,7 @@ const AllToys = () => {
 
     }, [])
 
-    console.log(cata);
+    // console.log(cata);
     return (
         <div>
             <Helmet>
@@ -30,6 +32,9 @@ const AllToys = () => {
 
 
             <div className="overflow-x-auto">
+                <div className="text-center mt-5 mb-16">
+                <input type="text" onChange={(e)=>setSearch(e.target.value)}  placeholder="Type here What you Want to Search" className="input input-bordered w-full max-w-xs bg-slate-300" />
+                </div>
                 <table className="table">
                     {/* head */}
                     <thead className="text-blue-600">
@@ -46,7 +51,9 @@ const AllToys = () => {
                     </thead>
                     <tbody>
                         {
-                            cata.map((cart,index) => <tr key={cart._id}>
+                            cata.filter((item)=>{
+                                return search.toLocaleLowerCase()===''?item:item.toyName.toLocaleLowerCase().includes(search)
+                            }).map((cart,index) => <tr key={cart._id}>
                                 <td>{index+1}</td>
                                 <td className="text-yellow-800">{cart.sellerName}</td>
                                 <td>{cart.toyName}</td>

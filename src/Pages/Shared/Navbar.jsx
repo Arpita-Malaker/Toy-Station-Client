@@ -33,7 +33,7 @@ const Navbar = () => {
 
               {
                 user?.uid ? <>
-                  <li><a> My Toys</a></li>
+                      <li><Link to='/mytoys'> My Toys</Link></li>
                   <li><Link to='/addtoy'> Add A Toy</Link></li>
                   <button onClick={handleLogOut} className='btn btn-warning'>Logout</button>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
               <li><Link to='/blogs'>Blogs</Link> </li>
               {
                 user?.uid ? <div className='flex'>
-                  <li><a> My Toys</a></li>
+                  <li><Link to='/mytoys'> My Toys</Link></li>
                   <li><Link to='/addtoy'> Add A Toy</Link></li>
                 
 
