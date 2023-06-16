@@ -1,10 +1,19 @@
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import ReactStarsRating from 'react-awesome-stars-rating';
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+// import { AuthContext } from "../../Provider/AuthProvider";
+// import Swal from "sweetalert2";
 
 const Shopbycategory = () => {
+
+  // const {user} = useContext(AuthContext);
+  
+  // const navigate = useNavigate();
+  // const location = useLocation();
+  // const from = location.state?.from?.pathname || '/';
+
 
   const [cata, setcata] = useState([]);
 
@@ -21,6 +30,25 @@ const Shopbycategory = () => {
 
   }, [])
 
+// const handleSeedetail=()=>{
+//   if(user){
+//     navigate(from, {state:{from:location}})
+//   }
+//   else{
+//     // Swal.fire({
+//     //   title: ' please Login to order food ',
+//     //   icon: 'warning',
+//     //   showCancelButton: true,
+//     //   confirmButtonColor: '#3085d6',
+//     //   cancelButtonColor: '#d33',
+//     //   confirmButtonText: 'login Now'
+//     // }).then((result) => {
+//     //   if (result.isConfirmed) {
+//     //       navigate('/login', {state:{from:location}})
+//     //   }
+//     // })
+//   }
+// }
 
 
 
@@ -59,7 +87,7 @@ const Shopbycategory = () => {
                   </h2>
                   <p className="text-blue-500 "><span className=" font-bold" >Price:$ </span>{item.price}</p>
                   <div className="card-actions justify-center">
-                    <Link to={`/toydetails/${item._id}`} state={item}><button className="btn btn-warning"> See Details</button></Link>
+                    <Link to={`/toydetails/${item._id}`} state={item}><button  className="btn btn-warning"> See Details</button></Link>
                   </div>
                 </div>
               </div>
@@ -79,7 +107,7 @@ const Shopbycategory = () => {
                   </h2>
                   <p className="text-blue-500 "><span className=" font-bold" >Price:$ </span>{item.price}</p>
                   <div className="card-actions justify-center">
-                  <Link to='/toydetails'><button className="btn btn-warning"> See Details</button></Link>
+                  <Link to='/toydetails'><button  className="btn btn-warning"> See Details</button></Link>
                   </div>
                 </div>
               </div>
@@ -98,7 +126,7 @@ const Shopbycategory = () => {
                   </h2>
                   <p className="text-blue-500 "><span className=" font-bold" >Price:$ </span>{item.price}</p>
                   <div className="card-actions justify-center">
-                  <Link to='/toydetails'><button className="btn btn-warning"> See Details</button></Link>
+                  <Link to={`/toydetails/${item._id}`}><button className="btn btn-warning"> See Details</button></Link>
                   </div>
                 </div>
               </div>

@@ -6,9 +6,9 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 const ToyDetails = () => {
     const { id } = useParams();
-    // console.log(id);
+    console.log(id);
     const datas = useLoaderData();
-    // console.log(datas);
+    console.log(datas);
 
     const [cata, setcata] = useState([]);
 
