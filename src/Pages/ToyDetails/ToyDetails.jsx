@@ -11,7 +11,7 @@ const ToyDetails = () => {
     const { id } = useParams();
     // console.log(id);
     const datas = useLoaderData();
-    // console.log(datas);
+    console.log(datas);
 
     const [cata, setcata] = useState([]);
 

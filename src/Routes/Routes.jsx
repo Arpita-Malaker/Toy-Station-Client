@@ -41,7 +41,7 @@ import MyToys from "../Pages/MyToys/MyToys";
     path:'/toydetails/:id',
     element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
     // eslint-disable-next-line no-unused-vars
-    loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+    loader: ({ params }) => fetch(`http://localhost:5000/toys`)
 },
 {
   path:'/alltoys',
