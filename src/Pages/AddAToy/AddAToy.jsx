@@ -14,7 +14,7 @@ const AddAToy = () => {
         // const newData = {
         //     toyUrl:data.image,}
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://toy-station-server-arpita-malaker.vercel.app/toys', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),

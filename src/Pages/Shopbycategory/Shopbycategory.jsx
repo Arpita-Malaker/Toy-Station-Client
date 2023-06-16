@@ -20,7 +20,7 @@ const Shopbycategory = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/toys')
+    fetch('https://toy-station-server-arpita-malaker.vercel.app/toys')
       .then(res => res.json())
       .then(data => {
         setcata(data)

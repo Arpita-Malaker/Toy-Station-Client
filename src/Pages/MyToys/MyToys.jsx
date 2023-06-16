@@ -15,7 +15,7 @@ const MyToys = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://toy-station-server-arpita-malaker.vercel.app/toys')
             .then(res => res.json())
             .then(data => {
                 setcata(data)
@@ -42,7 +42,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((data)=>{
             if (data.isConfirmed) {
-                fetch(`http://localhost:5000/toys/${item._id}`, {
+                fetch(`https://toy-station-server-arpita-malaker.vercel.app/toys/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

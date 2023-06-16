@@ -34,7 +34,7 @@ const ToyDetails = () => {
 
     //     queryKey:['toys',id],
     //     queryFn: async()=>{
-    //         const res = await fetch(`http://localhost:5000/toys/${id}`)
+    //         const res = await fetch(`https://toy-station-server-arpita-malaker.vercel.app/toys/${id}`)
     //         return res.json();
     //     }
 
