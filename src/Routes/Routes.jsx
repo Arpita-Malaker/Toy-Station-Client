@@ -9,6 +9,8 @@ import Login from "../Pages/Contact/Login/Login";
 import Registration from "../Pages/Contact/Registration/Registration";
 import ErrorPage from "../Pages/ErroePage/ErrorPage";
 import Bolgs from "../Pages/Blogs/Bolgs";
+import ToyDetails from "../Pages/ToyDetails/ToyDetails";
+import PrivateRoute from "./PrivateRoute";
 
   export const router = createBrowserRouter([
     {
@@ -31,7 +33,14 @@ import Bolgs from "../Pages/Blogs/Bolgs";
     {
       path:'/blogs',
       element:<Bolgs></Bolgs>
-  }
+  },
+  {
+    path:'/toydetails/:id',
+    element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+    // eslint-disable-next-line no-unused-vars
+    loader: ({ params }) => fetch('http://localhost:5000/toys')
+}
+  
     
       ]
     },

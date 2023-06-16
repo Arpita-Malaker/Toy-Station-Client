@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import ReactStarsRating from 'react-awesome-stars-rating';
+import { Link } from "react-router-dom";
 
 const Shopbycategory = () => {
 
   const [cata, setcata] = useState([]);
+
 
 
   useEffect(() => {
@@ -46,7 +48,7 @@ const Shopbycategory = () => {
 
         <TabPanel className="grid grid-rows-6 grid-flow-col gap-4 lg:grid-rows-1 md:grid-rows-1 sm:grid-rows-3 ms-10">
           {
-            cata.slice(0, 9).map((item) => (item.subCategory === "Stuffed Animals") ? <div key={item._id} >
+            cata.map((item) => (item.subCategory === "Stuffed Animals") ? <div key={item._id} >
 
               <div className="card w-96 bg-base-100 shadow-xl">
                 <figure><img className=" h-48" src={item.toyUrl} alt="Shoes" /></figure>
@@ -57,7 +59,7 @@ const Shopbycategory = () => {
                   </h2>
                   <p className="text-blue-500 "><span className=" font-bold" >Price:$ </span>{item.price}</p>
                   <div className="card-actions justify-center">
-                    <button className="btn btn-warning"> See Details</button>
+                    <Link to={`/toydetails/${item._id}`} state={item}><button className="btn btn-warning"> See Details</button></Link>
                   </div>
                 </div>
               </div>
@@ -77,7 +79,7 @@ const Shopbycategory = () => {
                   </h2>
                   <p className="text-blue-500 "><span className=" font-bold" >Price:$ </span>{item.price}</p>
                   <div className="card-actions justify-center">
-                    <button className="btn btn-warning"> See Details</button>
+                  <Link to='/toydetails'><button className="btn btn-warning"> See Details</button></Link>
                   </div>
                 </div>
               </div>
@@ -96,7 +98,7 @@ const Shopbycategory = () => {
                   </h2>
                   <p className="text-blue-500 "><span className=" font-bold" >Price:$ </span>{item.price}</p>
                   <div className="card-actions justify-center">
-                    <button className="btn btn-warning"> See Details</button>
+                  <Link to='/toydetails'><button className="btn btn-warning"> See Details</button></Link>
                   </div>
                 </div>
               </div>

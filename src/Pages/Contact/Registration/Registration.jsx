@@ -7,15 +7,37 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Registration = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUserProfile} = useContext(AuthContext);
     const navigate = useNavigate();
-    const { register, handleSubmit,formState: { errors }  } = useForm();
+    const { register, handleSubmit,reset,formState: { errors }  } = useForm();
     const onSubmit = (data) => {
         createUser(data.email,data.password)
         .then(result=>{
             const loggedUser = result.user;
             console.log(loggedUser);
             navigate('/')
+            updateUserProfile(data.name, data.photoURL)
+            .then(()=>{
+              const saveUser = {name: data.name, email: data.email, img: data.photoURL}
+              fetch('http://localhost:5000/users',{
+                method:'POST',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body:JSON.stringify(saveUser)
+      
+              })
+              .then(res=>res.json())
+              .then(()=>{
+                if(data.insertedId){
+                  // console.log('user profile update')
+                  reset();
+                  navigate('/');
+                }
+              })
+            
+            })
+         .catch(error =>console.log(error))
         })
     }
 
