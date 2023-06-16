@@ -11,6 +11,7 @@ import ErrorPage from "../Pages/ErroePage/ErrorPage";
 import Bolgs from "../Pages/Blogs/Bolgs";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 import PrivateRoute from "./PrivateRoute";
+import AllToys from "../Pages/AllToys/AllToys";
 
   export const router = createBrowserRouter([
     {
@@ -38,8 +39,12 @@ import PrivateRoute from "./PrivateRoute";
     path:'/toydetails/:id',
     element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
     // eslint-disable-next-line no-unused-vars
-    loader: ({ params }) => fetch('http://localhost:5000/toys')
-}
+    loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+},
+{
+  path:'/alltoys',
+  element:<AllToys></AllToys>
+},
   
     
       ]

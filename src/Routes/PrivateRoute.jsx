@@ -22,7 +22,7 @@ const PrivateRoute = ({children}) => {
     }
     else{
         Swal.fire({
-            title: ' please Login to order food ',
+            title: ' please Login to See Details ',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',

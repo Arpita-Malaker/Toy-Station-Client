@@ -3,6 +3,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 
 const Registration = () => {
@@ -43,6 +44,10 @@ const Registration = () => {
 
     return (
         <div>
+                <Helmet>
+                <title>Toy Station | Registration</title>
+
+            </Helmet>
             <div className="hero min-h-screen">
                 <div className="hero-content mx-auto w-9/12">
 

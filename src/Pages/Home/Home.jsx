@@ -8,6 +8,7 @@ import './Home.css'
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -17,7 +18,7 @@ const Home = () => {
     return (
         <div>
           <Helmet>
-            <title>Toy Station| Home</title>
+            <title>Toy Station | Home</title>
           
         </Helmet>
      
@@ -29,7 +30,10 @@ const Home = () => {
       <p data-aos="fade-right" data-aos-duration="2000" className="mb-5 ml-10 max-w-md text-yellow-100">Welcome to Toy Station – your #1 hotspot for brilliant toys, infant items, diversions, kids’ toy and  music toy and more.
 
 We’re committed to giving you the plain best with attention to the most astounding quality, unwavering quality, client administration, and uniqueness.</p>
+      
+      <Link to='/alltoys'>
       <button className="btn btn-warning">See All ToyS</button>
+      </Link>
     </div>
   </div>
 </div>

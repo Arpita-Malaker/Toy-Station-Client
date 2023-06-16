@@ -3,6 +3,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
 
@@ -26,6 +27,10 @@ const Login = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Toy Station | Login</title>
+
+            </Helmet>
             <div className="hero min-h-screen">
                 <div className="hero-content mx-auto w-9/12">
 

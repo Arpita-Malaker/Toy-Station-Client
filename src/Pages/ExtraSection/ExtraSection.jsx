@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import img1 from '../../assets/picture/toy_station.jpg'
 
 const ExtraSection = () => {
@@ -14,7 +15,7 @@ const ExtraSection = () => {
                         <p>The Toy Store has always been interested in curating the finest toys for our customers. Still true to this day, our main focus is always to pick the best of the best. That is why we still hand pick all 17,000+ items in our inventory.</p>
                         <div className='flex justify-center gap-5 mt-16'>
                             <button className='btn btn-warning'>location</button>
-                            <button className='btn btn-success'>contact</button>
+                          <Link to='/login'>  <button className='btn btn-success'>contact</button></Link>
                         </div>
                       </div>
                     </div>

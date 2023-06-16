@@ -5,19 +5,27 @@ import './index.css'
 import {
   RouterProvider,
 } from "react-router-dom";
+
+
+// import { HelmetProvider } from 'react-helmet-async';
+import { QueryClient, QueryClientProvider } from "react-query";
 import { router } from './Routes/Routes';
 import AuthProvider from './Provider/AuthProvider';
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='max-w-screen-xl mx-auto'>
-     <React.StrictMode >
-      <AuthProvider>
-        
-     <RouterProvider router={router} />
 
-      </AuthProvider>
-      
-</React.StrictMode>
-  </div>
- ,
+  <React.StrictMode>
+    <AuthProvider>
+       <QueryClientProvider contextSharing={true} client={queryClient} >
+        <div className='max-w-screen-xl mx-auto'>
+          <RouterProvider router={router} />
+        </div>
+      </QueryClientProvider>
+    </AuthProvider>
+  </React.StrictMode>
+
+  ,
 )
+
+

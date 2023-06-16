@@ -87,7 +87,7 @@ const Shopbycategory = () => {
                   </h2>
                   <p className="text-blue-500 "><span className=" font-bold" >Price:$ </span>{item.price}</p>
                   <div className="card-actions justify-center">
-                    <Link to={`/toydetails/${item._id}`} state={item}><button  className="btn btn-warning"> See Details</button></Link>
+                    <Link to={`/toydetails/${item._id}`}><button  className="btn btn-warning"> See Details</button></Link>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,8 @@ const Shopbycategory = () => {
                   </h2>
                   <p className="text-blue-500 "><span className=" font-bold" >Price:$ </span>{item.price}</p>
                   <div className="card-actions justify-center">
-                  <Link to='/toydetails'><button  className="btn btn-warning"> See Details</button></Link>
+                  <Link to={`/toydetails/${item._id}`}><button  className="btn btn-warning"> See Details</button></Link>
+
                   </div>
                 </div>
               </div>

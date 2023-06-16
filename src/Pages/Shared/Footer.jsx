@@ -9,15 +9,15 @@ const Footer = () => {
         <div className="flex gap-48">
         <div className="flex ">
           <Lottie className=" w-16" animationData={a1} loop={true} />
-            <p>Language Station</p>
+            <p className="text-2xl mt-5">Toy Station</p>
           </div> 
           <div className="">
           <div className="grid grid-flow-col gap-4 mb-7">
             
           <Link to='/' className="link link-hover">About us</Link>
           <Link to='/registration' className="link link-hover">Contact</Link>
-          <Link to='/classes' className="link link-hover">Classes</Link>
-          <Link  to='/instructor' className="link link-hover">Instructor</Link>
+          <Link to='/alltoys' className="link link-hover">All toys</Link>
+          <Link  to='/blogs' className="link link-hover">Blogs</Link>
           </div>
           <div>
             <div className="grid grid-flow-col gap-4">
