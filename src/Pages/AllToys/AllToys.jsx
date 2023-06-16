@@ -34,6 +34,7 @@ const AllToys = () => {
                     {/* head */}
                     <thead className="text-blue-600">
                         <tr>
+                            <th>Index</th>
                             <th>Seller Name/Seller Factory Name</th>
                             <th>Toy Name</th>
                             <th>Sub-category</th>
@@ -45,7 +46,8 @@ const AllToys = () => {
                     </thead>
                     <tbody>
                         {
-                            cata.map((cart) => <tr key={cart._id}>
+                            cata.map((cart,index) => <tr key={cart._id}>
+                                <td>{index+1}</td>
                                 <td className="text-yellow-800">{cart.sellerName}</td>
                                 <td>{cart.toyName}</td>
                                 <td>{cart.subCategory}</td>
