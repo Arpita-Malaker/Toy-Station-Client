@@ -3,6 +3,8 @@ import a1 from '../../assets/slinky toy.json'
 import Lottie from "lottie-react";
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+// import { Tooltip } from 'react-tooltip';
+import './navbar.css'
 const Navbar = () => {
 
   const { user, logOut } = useContext(AuthContext);
@@ -32,7 +34,7 @@ const Navbar = () => {
               {
                 user?.uid ? <>
                   <li><a> My Toys</a></li>
-                  <li><a> Add A Toy</a></li>
+                  <li><Link to='/addtoy'> Add A Toy</Link></li>
                   <button onClick={handleLogOut} className='btn btn-warning'>Logout</button>
 
                 </> : <>
@@ -54,12 +56,19 @@ const Navbar = () => {
 
               <li><Link to='/blogs'>Blogs</Link> </li>
               {
-                user?.uid ? <>
+                user?.uid ? <div className='flex'>
                   <li><a> My Toys</a></li>
-                  <li><a> Add A Toy</a></li>
-                  <button onClick={handleLogOut} className='btn btn-warning'>Logout</button>
+                  <li><Link to='/addtoy'> Add A Toy</Link></li>
+                
 
-                </> : <>
+                <div className='tooltip'>
+                <img className='rounded w-10 h-10 mr-4 ' src={user.photoURL} alt="" />
+                <p className='tooltiptext'>{user.displayName}</p>
+                </div>
+              
+                  <button onClick={handleLogOut} className='btn btn-warning '>Logout</button>
+
+                </div> : <>
                   <li><Link to='/login'><button className='btn btn-warning'>Login</button></Link></li>
                 </>
               }
